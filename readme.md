@@ -13,8 +13,9 @@ Vous devez avoir au préalable installé [l'environnement de développement d'An
 
 Dans les variables d'environnement il faut ajouter :
 - `JAVA_HOME` : pointe sur le répertoire de la JDK
-- `ANDROID_HOME` : répertoire du SKD Android (disponible dans l'onglet du SDK manager de Android Studio)
+- `ANDROID_SDK_ROOT` : répertoire du SKD Android (disponible dans l'onglet du SDK manager de Android Studio)
 - dans `PATH` : le chemin des répertoires `tools`, `tools/bin`, and `platform-tools` depuis `ANDROID_HOME`
+
 
 ## Installation
 
@@ -76,13 +77,6 @@ $ npx cordova run
 ```
 Processing flow :
 > `npm run build` > `cordova run`
-
-### Lint
-
-Le projet est fourni avec un outil d'analyse statique du code (eslint). Pour le lancer, utilisez la commande:
-```
-$ npm run lint
-```
 
 ## Usage
 

@@ -1,10 +1,11 @@
 .cache
 .dist
-.vscode
+.parcel-cache
 hooks
 node_modules
 platforms
 plugins
+build
 res
 www
 # OS X
