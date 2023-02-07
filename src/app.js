@@ -17,17 +17,28 @@ function ListNumbers() {
     return listItems;
 }
 
+const random = (max, min) => Math.floor(Math.random() * (max - min + 1) + min);
+
 function App() {
     //var [date, setDate] = useState(new Date().toLocaleTimeString());
     /*
     const [nbRoue, setNbRoue] = useState(4);
     const changeNbRoue = () => setNbRoue(nbRoue + 1);
     */
-   const vehicules = [
-        {roue : 4, nbPassager : 2},
-        {roue : 3, nbPassager : 3},
-        {roue : 2, nbPassager : 1}
-   ]
+
+    var [nbVehicule, setNbVehicule] = useState(0);
+    if(nbVehicule == 0) {
+        let response = window.prompt('Combien de vehicule voulez vous ?');
+        setNbVehicule(response)
+    }
+
+    const generateVehicule = () => { return {roue : random(2,8), nbPassager : random(1, 4)}}
+    const vehicules = [];
+    for(var i= 0; i< nbVehicule; i++) vehicules.push(generateVehicule())
+    
+    /*
+    const vehiculesJsx = [<Vehicule roue={4} nbPassager={2}/>]
+    vehiculesJsx.map(vehicule => <>{vehicule}</>);*/
     return (
         <div style={{width : "300px", margin : 'auto', marginTop : '20px'}}>
             <ListVehicules vehicules={vehicules}/>
